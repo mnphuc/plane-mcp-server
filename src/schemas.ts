@@ -250,3 +250,14 @@ export const IssueWorkLog = z.object({
 });
 
 export type IssueWorkLog = z.infer<typeof IssueWorkLog>;
+
+export const Page = z.object({
+  id: z.string().uuid().readonly(),
+  created_at: z.string().datetime({ offset: true }).readonly(),
+  updated_at: z.string().datetime({ offset: true }).readonly(),
+  name: z.string(),
+  description_html: z.string(),
+  created_by: z.string().uuid().readonly(),
+  updated_by: z.string().uuid().readonly(),
+});
+export type Page = z.infer<typeof Page>;
