@@ -382,6 +382,34 @@ You can also connect Plane to [VSCode](https://code.visualstudio.com/docs/copilo
     - `issue_id` (string, required): UUID of the issue
     - `worklog_id` (string, required): UUID of the worklog
 
+### Pages
+
+- `create_wiki_page`
+  - Create a wiki page in the workspace
+  - Parameters:
+    - `page_data`: Object containing:
+      - `name` (string, required): Name of the page
+      - `description_html` (string, required): HTML content of the page
+
+- `create_project_page`
+  - Create a project page
+  - Parameters:
+    - `project_id` (string, required): UUID of the project
+    - `page_data`: Object containing:
+      - `name` (string, required): Name of the page
+      - `description_html` (string, required): HTML content of the page
+
+- `get_wiki_page`
+  - Retrieve a wiki page
+  - Parameters:
+    - `page_id` (string, required): UUID of the wiki page to retrieve
+
+- `get_project_page`
+  - Retrieve a project page
+  - Parameters:
+    - `project_id` (string, required): UUID of the project containing the page
+    - `page_id` (string, required): UUID of the project page to retrieve
+
 
 ## License
 
